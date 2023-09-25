@@ -20,7 +20,7 @@ def gen_matrix(n, m):
         print(f"Error Occurred: [{e}]")
 
 def gen_coordinate(a, n, m):
-    print(f"\n{n} X {n} 행렬에서 {m}개의 좌표 구간 합 결과를 반환:")
+    print(f"\n위에서 생성된 {n} X {n} 행렬에서 다음 {m}개의 좌표 구간 합 결과를 반환:")
 
     xy = []
     for i in range(m):
@@ -37,13 +37,13 @@ def sum_mat_bydiff(l, x1, y1, x2, y2):
     for i in range(x1, x2 + 1):
         for j in range(y1, y2 + 1):
             total += l[i][j]
-            print(f"total = {total}, l[i][j] = {l[i][j]}")
+            print(f"total = {total}, l[{i}][{j}] = {l[i][j]}")
     return total
 
 def sum_result(matrix, coordinate: []):
     try:
         for idx, value in enumerate(coordinate):
-            print(f"\n {idx + 1} / {len(coordinate)} 번째 좌표 간 값의 합 계산 시작")
+            print(f"\n {idx + 1} / {len(coordinate)} 번째 좌표 [{value}] 간 값의 합 계산 시작")
             x1, y1, x2, y2 = 0, 0, 0, 0
             for j in range(4):
                 match j:
