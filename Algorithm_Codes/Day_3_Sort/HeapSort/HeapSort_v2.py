@@ -41,17 +41,17 @@ def checkSort(a, n):
         print("정렬 오류 발생\n")
         print()
 
-# if __name__ == "__main__":
-#     for j in range(1, 4):
-#         N = 5000 * j
-#         a = [-1]
-#         for i in range(N):
-#             a.append(random.randint(1, N))
-#         start_time = time.time()
-#         heapSort(a)
-#         end_time = time.time() - start_time
-#         print(f'히프 정렬의 실행 시간 ({j}N = %d) : %0.3f' % (N, end_time))
-#         checkSort(a, N)
+if __name__ == "__main__":
+    for j in range(1, 4):
+        N = 5000 * j
+        a = [-1]
+        for i in range(N):
+            a.append(random.randint(1, N))
+        start_time = time.time()
+        heapSort(a)
+        end_time = time.time() - start_time
+        print(f'히프 정렬의 실행 시간 ({j}N = %d) : %0.3f' % (N, end_time))
+        checkSort(a, N)
 
 # if __name__ == "__main__":
 #     for y in range(1, 4):
