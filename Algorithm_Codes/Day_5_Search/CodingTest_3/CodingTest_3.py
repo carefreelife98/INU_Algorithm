@@ -11,6 +11,8 @@
 # [출력]
 # 첫째 줄에 Di를 공백으로 구분하여 순서대로 출력한다.
 #
+import sys
+
 
 # L // i == 0 인 경우
 # 아직 (-) Index 가 존재함. -> L % i 연산 결과 까지의 i 중 최소값 찾기.
@@ -31,7 +33,8 @@ def find_minimum(arr, n, l):
             temp_arr.sort()
         rs.append(temp_arr[0])
     output = ' '.join(map(str, rs))
-    print(output)
+    # print(output)
+    sys.stdout.write(output)
 
 if __name__ == "__main__":
     while True:
@@ -46,8 +49,8 @@ if __name__ == "__main__":
     # a = [1, 5, 2, 3, 6, 4, 5, 7, 3, 5, 2, 6]
     # print(f"N = {N} 개의 정수를 입력하세요: ")
     a = input().split()
-    for i in a:
-        i = int(i)
+    for i in range(N):
+        a[i] = int(a[i])
     # print(f"a = {a}")
     # for i in range(N):
     #     a.append(int(input()))
