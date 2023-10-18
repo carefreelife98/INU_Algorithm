@@ -47,20 +47,20 @@ if __name__ == "__main__":
     a = [-1]
     for i in range(N, 0, -1):
         a.append(random.randint(1, N))
-    a2 = a.copy()
+        a2 = a.copy()
 
-    print(f"초기 배열 상태 a = {a}")
-    start = time.time()
-    cocktail_shaker_prof_sourcecode.cocktailShaker(a, N)
-    end = time.time() - start
-    print(f"Cocktail Sort 정렬 후 a = {a}")
-    checkSort(a, N)
-    print(f'칵테일 쉐이커 정렬의 실행 시간 (N = %d) : %0.3f\n\n' % (N, end))
+        print(f"초기 배열 상태 a = {a}")
+        start = time.time()
+        cocktail_shaker_prof_sourcecode.cocktailShaker(a, N)
+        end = time.time() - start
+        print(f"Cocktail Sort 정렬 후 a = {a}")
+        checkSort(a, N)
+        print(f'칵테일 쉐이커 정렬의 실행 시간 (N = %d) : %0.3f\n\n' % (N, end))
 
-    print(f"초기 배열 상태 a2 = {a2}")
-    start = time.time()
-    bubble_sort(a2, N)
-    end = time.time() - start
-    print(f"버블 정렬 후 a2 = {a2}")
-    checkSort(a2, N)
-    print(f'버블 정렬의 실행 시간 (N = %d) : %0.3f\n\n' % (N, end))
+        print(f"초기 배열 상태 a2 = {a2}")
+        start = time.time()
+        bubble_sort(a2, N)
+        end = time.time() - start
+        print(f"버블 정렬 후 a2 = {a2}")
+        checkSort(a2, N)
+        print(f'버블 정렬의 실행 시간 (N = %d) : %0.3f\n\n' % (N, end))
