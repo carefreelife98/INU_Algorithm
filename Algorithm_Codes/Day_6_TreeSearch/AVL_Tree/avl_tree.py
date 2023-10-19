@@ -95,11 +95,13 @@ class Dict:
         else:
             self.balance = 0
 
-    # def check(self, search_key):
+    def check(self, search_key):
+        return
+
 if __name__ == "__main__":
     d = Dict()
     key = int(input('키 : '))
     while key != 999:
         d.insert(key)
-        # d.check(key)
+        d.check(key)
         key = int(input('키 : '))
