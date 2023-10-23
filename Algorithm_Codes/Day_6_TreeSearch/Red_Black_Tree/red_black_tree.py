@@ -76,12 +76,25 @@ class Dict:
             c = y.left
         else:
             c = y.right
-        gc = c.right
-        c.right = gc.left
-        gc.left = c
-        y.left = gc
-
+        if c.key > v:
+            gc = c.left
+            c.left = gc.right
+            gc.right = c
+        else:
+            gc = c.right
+            c.right = gc.left
+            gc.left = c
+        if y.key > v:
+            y.left = gc
+        else:
+            y.right = gc
         return gc
+
+        # gc = c.right
+        # c.right = gc.left
+        # gc.left = c
+        # y.left = gc
+
 
 if __name__ == "__main__":
     N = 10
@@ -97,7 +110,7 @@ if __name__ == "__main__":
     for i in range(N):
         result = d.search(s_key[i])
         if result == -1 or result != s_key[i]:
-            print("탐색 오류")
+            print(f"탐색 오류: result = {result}, s_key[{i}] = {s_key[i]}")
     end_time = time.time() - start_time
     print('레드 블랙 트리 탐색의 실행 시간 (N = %d) : %0.3f'%(N, end_time))
     print('탐색 완료')

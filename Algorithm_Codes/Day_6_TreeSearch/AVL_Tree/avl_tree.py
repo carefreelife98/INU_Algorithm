@@ -96,7 +96,22 @@ class Dict:
             self.balance = 0
 
     def check(self, search_key):
-        return
+        x = self.node
+        temp = None  # 부모 노드를 저장할 변수
+        while x is not None:
+            if x.key == search_key:
+                if temp is not None:
+                    print(f"탐색 성공 (key={x.key}|search_key={search_key}) | Parents = {temp.key}")
+                else:
+                    print(f"key = {x.key} == search_key = {search_key}, No Parent (Root)")
+                break  # 원하는 노드를 찾았으므로 루프 종료
+            temp = x  # 현재 노드를 부모 노드로 저장
+            if search_key < x.key:
+                x = x.left.node
+            else:
+                x = x.right.node
+        if x is None:
+            print(f"{search_key}는 이진 트리에 존재하지 않습니다.")
 
 if __name__ == "__main__":
     d = Dict()
