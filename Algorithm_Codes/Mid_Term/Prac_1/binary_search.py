@@ -12,15 +12,16 @@ def binarySearch(a, key, left, right):
     else:
         return -1
 
-A = []
-for i in range(10):
-    A.append(random.randint(1, 50))
-A.sort()
-print(A)
+if __name__ == "__main__":
+    A = []
+    for i in range(10):
+        A.append(random.randint(1, 50))
+    A.sort()
+    print(A)
 
-key = int(input('탐색 키 입력 : '))
-res = binarySearch(A, key, 0, len(A) - 1)
-if res == -1:
-    print('탐색 키를 갖는 원소를 찾을 수 없음')
-else:
-    print(res+1, '번째 원소')
+    key = int(input('탐색 키 입력 : '))
+    res = binarySearch(A, key, 0, len(A) - 1)
+    if res == -1:
+        print('탐색 키를 갖는 원소를 찾을 수 없음')
+    else:
+        print(res+1, '번째 원소')
