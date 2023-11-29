@@ -1,0 +1,26 @@
+match(t[])
+  dq ← Deque(100);
+  j ← 0;
+  N ← t의 길이 – 1;
+  state ← next1[0];
+  dq.insertLast(scan);
+  while (state ≠ 0) {
+    case {
+      state = scan:
+        j ← j + 1;
+        if (dq.isEmpty()) then dq.insertFirst(next1[0]);
+        dq.insertLast(scan);
+      ch[state] = t[j]:
+        dq.insertLast(next1[state]);
+      ch[state] = ‘ ’:
+        n1 ← next1[state];
+        n2 ← next2[state];
+        dq.insertFirst(n1);
+        if (n1 ≠ n2) then dq.insertFirst(n2);
+      }
+    if (dq.isEmpty()) then return j;
+    if (j > N) then return 0
+    state ← dq.deleteFirst()
+    if (dq.checkDq()) then state ← dq.deleteFirst();
+  return j-1;
+end match()
