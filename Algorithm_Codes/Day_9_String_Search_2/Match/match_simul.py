@@ -93,7 +93,7 @@ def match(t):
 if __name__ == "__main__":
     # text = 'AABCAAABBACDE' + '\0'
     # text = 'AC' + '\0'
-    text = 'AAAED' + '\0'
+    text = 'ABE' + '\0'
     previous = 0
     i = 0
     N = len(text)-1

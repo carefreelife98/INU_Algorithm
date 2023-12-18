@@ -143,8 +143,8 @@ def decode(h):
 
 
 if __name__ == "__main__":
-    # text = 'VISION QUESTION ONION CAPTION GRADUATION EDUCATION'
-    text = 'A SIMPLE STRING TO BE ENCODED USING A MINIMAL NUMBER OF BITS'
+    text = 'VISION QUESTION ONION CAPTION GRADUATION EDUCATION'
+    # text = 'A SIMPLE STRING TO BE ENCODED USING A MINIMAL NUMBER OF BITS'
     print(f"\nOriginal Text: {text}\n")
 
     count = [0]*100
@@ -160,10 +160,12 @@ if __name__ == "__main__":
     # print(f"code[k]: {code} \nlength[k]: {length}\n")
 
     k = []
+    print(f"count={len(count)}, {count}")
     for i in range(len(count)):
         if count[i] != 0:
             k.append(i)
+    print(len(k), k)
     h = encode(text, M)
-    print(f"Encoded Text: {h}\n")
+    print(f"Encoded Text: {len(h)},{h}\n")
     d = decode(h)
     print(f"Decoded Text: {d}\n")

@@ -10,6 +10,7 @@ def initSkip(p):
         skip[i] = M
     for i in range(M):
         skip[index(p[i])] = M - i - 1
+    print(skip)
 
 def BM(p, t, k):
     M = len(p)

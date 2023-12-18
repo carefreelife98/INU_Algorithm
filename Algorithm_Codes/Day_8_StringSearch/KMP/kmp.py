@@ -11,8 +11,8 @@ def init_next(p):
         while j >= 0 and p[i] != p[j]:
             j = next[j]
             comp += 1
-            # print(f"값(p[i]:{p[i]} != p[j]:{p[j]}")
-            # print(f"재시작 위치: {i + 1}")
+            print(f"값(p[i]:{p[i]} != p[j]:{p[j]}")
+            print(f"재시작 위치: {i + 1}")
         i += 1
         j += 1
     print(f"총 비교횟수 : {comp}")
